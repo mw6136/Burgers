@@ -14,7 +14,9 @@ for f in tqdm(sorted(glob.glob("*.csv")), "Generating plots:"):
     ds = np.genfromtxt(f, delimiter=",")
 
     if savenum == "0000":
-        ylo, yhi = ds[:-1].min() - 0.1 * abs(ds[:-1].min()), ds[:-1].max() + 0.1 * abs(ds[:-1].max())
+        ylo, yhi = ds[:-1].min() - 0.1 * abs(ds[:-1].min()), ds[:-1].max() + 0.1 * abs(
+            ds[:-1].max()
+        )
 
     plt.style.use("classic")
     fig = plt.figure(figsize=(10, 6))
